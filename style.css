@@ -5,9 +5,10 @@
     font-family: "Inter", sans-serif;
 }
 
+/* Reverse color scheme */
 body {
-    background: black;
-    color: white;
+    background: white;
+    color: black;
     overflow-x: hidden;
 }
 
@@ -16,65 +17,81 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 18px 55px;
+    padding: 20px 55px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(0,0,0,0.25);
-    backdrop-filter: blur(18px);
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(16px);
     z-index: 1000;
-    animation: fadeDown 0.7s ease-out;
+    animation: slideDown 0.7s ease;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
-@keyframes fadeDown {
-    from { opacity: 0; transform: translateY(-20px); }
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-25px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: black;
 }
 
 .navbar a {
     text-decoration: none;
-    color: white;
-    margin: 0 15px;
+    color: black;
+    margin: 0 14px;
+    opacity: 0.75;
+    transition: 0.2s ease;
     font-size: 0.95rem;
-    opacity: 0.85;
-    transition: opacity 0.2s ease;
 }
+
 .navbar a:hover {
     opacity: 1;
 }
 
 .btn {
-    padding: 8px 20px;
+    padding: 8px 22px;
+    background: black;
+    color: white;
     border-radius: 22px;
     border: none;
-    background: white;
-    color: black;
     cursor: pointer;
     font-weight: 500;
+    transition: 0.2s ease;
+}
+
+.btn:hover {
+    background: #222;
 }
 
 /* HERO SECTION */
 .hero {
-    position: relative;
+    width: 100%;
     height: 100vh;
+    position: relative;
 }
 
-.hero-video {
+.hero-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(62%);
+    filter: brightness(70%);
 }
 
 .hero-content {
     position: absolute;
-    bottom: 20%;
+    bottom: 18%;
     left: 8%;
+    color: white;
 }
 
 .hero-content h1 {
-    font-size: 4.8rem;
+    font-size: 4.3rem;
     font-weight: 600;
+    color: white;
 }
 
 .hero-btn {
@@ -86,11 +103,17 @@ body {
     border: none;
     cursor: pointer;
     font-size: 1.1rem;
+    transition: 0.2s ease;
 }
 
+.hero-btn:hover {
+    background: #e8e8e8;
+}
+
+/* Fade animation */
 .fade-in {
     opacity: 0;
-    animation: fadeIn 1.4s ease forwards 0.5s;
+    animation: fadeIn 1.4s ease forwards 0.4s;
 }
 
 @keyframes fadeIn {

@@ -1,1 +1,1 @@
-console.log("varanasinath.com loaded");
+console.log("varanasinath.com UI loaded");
