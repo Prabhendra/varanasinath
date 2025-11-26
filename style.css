@@ -5,7 +5,7 @@
     font-family: "Inter", sans-serif;
 }
 
-/* Reverse color scheme */
+/* Reverse color palette */
 body {
     background: white;
     color: black;
@@ -17,41 +17,41 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 20px 55px;
+    padding: 22px 55px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(255,255,255,0.7);
+    background: rgba(255,255,255,0.65);
     backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
     z-index: 1000;
-    animation: slideDown 0.7s ease;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
+    animation: navSlide 0.7s ease-out;
 }
 
-@keyframes slideDown {
+@keyframes navSlide {
     from { opacity: 0; transform: translateY(-25px); }
     to { opacity: 1; transform: translateY(0); }
-}
-
-.logo {
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: black;
 }
 
 .navbar a {
     text-decoration: none;
     color: black;
-    margin: 0 14px;
+    margin: 0 16px;
     opacity: 0.75;
-    transition: 0.2s ease;
     font-size: 0.95rem;
+    transition: 0.25s ease;
 }
-
 .navbar a:hover {
     opacity: 1;
 }
 
+.logo {
+    font-weight: 700;
+    font-size: 1.32rem;
+    color: black;
+}
+
+/* BUTTONS */
 .btn {
     padding: 8px 22px;
     background: black;
@@ -60,9 +60,8 @@ body {
     border: none;
     cursor: pointer;
     font-weight: 500;
-    transition: 0.2s ease;
+    transition: 0.25s ease;
 }
-
 .btn:hover {
     background: #222;
 }
@@ -72,13 +71,18 @@ body {
     width: 100%;
     height: 100vh;
     position: relative;
+    background: black;
 }
 
 .hero-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(70%);
+    filter: brightness(65%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
 .hero-content {
@@ -89,25 +93,25 @@ body {
 }
 
 .hero-content h1 {
-    font-size: 4.3rem;
+    font-size: 4.6rem;
     font-weight: 600;
-    color: white;
+    line-height: 1.05;
 }
 
+/* HERO BUTTON */
 .hero-btn {
-    margin-top: 20px;
-    padding: 14px 30px;
-    border-radius: 26px;
+    margin-top: 24px;
+    padding: 14px 32px;
+    border: none;
     background: white;
     color: black;
-    border: none;
+    border-radius: 26px;
     cursor: pointer;
     font-size: 1.1rem;
-    transition: 0.2s ease;
+    transition: 0.25s ease;
 }
-
 .hero-btn:hover {
-    background: #e8e8e8;
+    background: #e5e5e5;
 }
 
 /* Fade animation */
