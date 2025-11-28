@@ -1,15 +1,28 @@
-/* GLOBAL PARALLAX */
-body {
-    perspective: 1500px;
+/* Blue Google Antigravity particles behind everything */
+#blueParticles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -5;
+    pointer-events: none;
 }
 
-/* HERO SECTION */
-.hero-box {
-    position: relative;
+/* GLOBAL PARALLAX ENGINE */
+#gravity-wrapper {
+    perspective: 1400px;
     transform-style: preserve-3d;
 }
 
-/* Hero image box spacing */
+.parallax-item {
+    will-change: transform;
+    transition: transform 0.12s ease-out;
+}
+
+/* HERO SECTION */
+.hero-box { position: relative; }
+
 .hero-image {
     width: 100%;
     height: 100%;
@@ -19,13 +32,6 @@ body {
     top: 0;
     left: 0;
     z-index: 0;
-    transform: translateZ(0);
-    will-change: transform;
-}
-
-.smooth-tilt {
-    transition: transform 0.2s ease-out;
-    will-change: transform;
 }
 
 .hero-content {
@@ -34,7 +40,6 @@ body {
     left: 8%;
     z-index: 2;
     color: white;
-    transform: translateZ(80px);
 }
 
 .hero-content h1 {
@@ -45,7 +50,6 @@ body {
 .hero-btn {
     margin-top: 24px;
     padding: 14px 32px;
-    border: none;
     background: white;
     color: black;
     border-radius: 26px;
@@ -54,16 +58,11 @@ body {
     transition: 0.25s ease;
 }
 
-.hero-btn:hover {
-    background: #e5e5e5;
-}
+.hero-btn:hover { background: #e5e5e5; }
 
-/* Fade animation */
 .fade-in {
     opacity: 0;
     animation: fadeIn 1.4s ease forwards 0.4s;
 }
 
-@keyframes fadeIn {
-    to { opacity: 1; }
-}
+@keyframes fadeIn { to { opacity: 1; } }
