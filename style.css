@@ -1,68 +1,25 @@
-/* Blue Google Antigravity particles behind everything */
-#blueParticles {
+/* MAKE CANVAS BEHIND EVERYTHING */
+#particleCanvas {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -5;
-    pointer-events: none;
+    width:100%;
+    height:100%;
+    z-index:-10;
 }
 
-/* GLOBAL PARALLAX ENGINE */
-#gravity-wrapper {
-    perspective: 1400px;
-    transform-style: preserve-3d;
+/* PAGE WRAPPER */
+#pageWrapper {
+    position: relative;
+    z-index: 10;
 }
 
-.parallax-item {
-    will-change: transform;
-    transition: transform 0.12s ease-out;
+/* SECTIONS */
+.heroSection, .section2, .section3 {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    font-weight: 700;
 }
-
-/* HERO SECTION */
-.hero-box { position: relative; }
-
-.hero-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(65%);
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-}
-
-.hero-content {
-    position: absolute;
-    bottom: 18%;
-    left: 8%;
-    z-index: 2;
-    color: white;
-}
-
-.hero-content h1 {
-    font-size: 4.6rem;
-    font-weight: 600;
-}
-
-.hero-btn {
-    margin-top: 24px;
-    padding: 14px 32px;
-    background: white;
-    color: black;
-    border-radius: 26px;
-    cursor: pointer;
-    font-size: 1.1rem;
-    transition: 0.25s ease;
-}
-
-.hero-btn:hover { background: #e5e5e5; }
-
-.fade-in {
-    opacity: 0;
-    animation: fadeIn 1.4s ease forwards 0.4s;
-}
-
-@keyframes fadeIn { to { opacity: 1; } }

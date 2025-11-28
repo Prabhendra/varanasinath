@@ -5,73 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>varanasinath.com</title>
 
-    <link rel="icon" type="image/png" href="assets/icons/icon.png">
-
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-white text-black">
+<body>
 
-<!-- FULL SCREEN BLUE PARTICLE CANVAS (Google Antigravity) -->
-<canvas id="blueParticles"></canvas>
+<!-- ⭐ PARTICLE BACKGROUND -->
+<canvas id="particleCanvas"></canvas>
 
-<!-- WRAPPER FOR PARALLAX -->
-<div id="gravity-wrapper">
+<!-- ⭐ MAIN CONTENT -->
+<div id="pageWrapper">
 
-<!-- ⭐ NAVBAR -->
-<header class="fixed w-full z-40 transition-all duration-200 bg-white bg-opacity-95 border-b border-gray-200 py-4 top-0">
-    <div class="px-4 lg:px-12">
-        <div class="flex items-center justify-start gap-10">
-
-            <div class="flex items-center">
-                <a href="/" class="flex items-center gap-2 hover:opacity-80 transition-all">
-                    <img src="assets/icons/icon.png" class="w-8 h-8 rounded" alt="logo">
-                    <span class="font-semibold text-lg tracking-wide">varanasinath.com</span>
-                </a>
-            </div>
-
-            <nav class="hidden lg:flex space-x-8 font-medium ml-10">
-                <a href="#" class="hover:text-gray-700">AI Product</a>
-                <a href="#" class="hover:text-gray-700">Shop</a>
-                <a href="#" class="hover:text-gray-700">Consciousness</a>
-                <a href="#" class="hover:text-gray-700">Company</a>
-            </nav>
-
-            <div class="hidden lg:flex items-center gap-3 ml-auto">
-                <a href="#" class="px-3 py-1 rounded-full border border-black hover:bg-black hover:text-white transition">Help ?</a>
-                <a href="#" class="px-3 py-1 rounded-full border border-black hover:bg-black hover:text-white transition">Log In</a>
-                <a href="#" class="px-4 py-2 rounded-xl bg-black text-white hover:bg-gray-800 transition">Get Started</a>
-            </div>
-
-        </div>
+<header class="fixed w-full z-50 bg-white bg-opacity-90 border-b py-4">
+    <div class="px-6 flex items-center gap-4">
+        <img src="assets/icons/icon.png" class="w-8 h-8 rounded" />
+        <span class="font-semibold text-lg">varanasinath.com</span>
     </div>
 </header>
 
-
-<!-- ⭐ HERO SECTION -->
-<section class="hero pt-[92px] px-4 lg:px-12 parallax-item" data-depth="60">
-    <div class="hero-box relative w-full h-[92vh] rounded-xl overflow-hidden">
-        <img src="assets/images/hero.jpg" class="hero-image">
-
-        <div class="hero-content fade-in">
-            <h1>Attention is Everything.</h1>
-            <button class="hero-btn">Begin the Journey →</button>
-        </div>
-    </div>
+<section class="heroSection parallax" data-depth="80">
+    <h1>Attention is Everything.</h1>
 </section>
 
-<section class="parallax-item h-[100vh] flex items-center justify-center text-4xl font-bold" data-depth="120">
-    AI. Consciousness. Environment.
+<section class="parallax section2" data-depth="140">
+    <h2>AI. Consciousness. Environment.</h2>
 </section>
 
-<section class="parallax-item h-[100vh] flex items-center justify-center text-4xl font-bold" data-depth="180">
-    Explore the Future.
+<section class="parallax section3" data-depth="200">
+    <h2>Explore the Future.</h2>
 </section>
 
-</div> <!-- END gravity-wrapper -->
+</div>
 
 <script src="script.js"></script>
 </body>
