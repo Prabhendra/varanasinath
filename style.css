@@ -33,6 +33,7 @@ body {
     to { opacity: 1; transform: translateY(0); }
 }
 
+/* NAV LINKS */
 .navbar a {
     text-decoration: none;
     color: black;
@@ -45,10 +46,14 @@ body {
     opacity: 1;
 }
 
-.logo {
-    font-weight: 700;
-    font-size: 1.32rem;
-    color: black;
+/* SVG LOGO */
+.logo-svg {
+    height: 22px;
+    fill: black;
+    transition: 0.2s ease;
+}
+.logo:hover .logo-svg {
+    opacity: 0.8;
 }
 
 /* BUTTON */
@@ -71,7 +76,7 @@ body {
     width: 100%;
     height: 100vh;
     position: relative;
-    background: none; /* FIXED */
+    background: none;
 }
 
 .hero-image {
@@ -82,7 +87,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 0; /* FIXED */
+    z-index: 0;
 }
 
 .hero-content {
