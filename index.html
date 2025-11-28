@@ -5,52 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>varanasinath.com</title>
 
-    <!-- Tailwind -->
+    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="overflow-x-hidden">
 
-<!-- 🔥 NAVBAR -->
-<header id="navbar"
-    class="fixed w-full z-40 transition-all duration-300 py-4 px-8 flex items-center justify-between
-           bg-transparent text-white">
+<body class="bg-white text-black overflow-y-scroll">
 
-    <!-- LEFT LOGO -->
-    <a href="/" class="flex items-center gap-3 font-semibold text-lg">
-        <span>varanasinath.com</span>
-    </a>
+<!-- ⭐ NAVBAR -->
+<header class="fixed w-full z-40 transition-all duration-200 bg-white bg-opacity-95 border-b border-gray-200 py-4 lg:py-0 top-0">
+    <div class="px-6 lg:px-12">
+        <div class="flex items-center justify-between">
 
-    <!-- CENTER NAV -->
-    <nav class="hidden lg:flex items-center gap-8 font-medium">
-        <a href="#" class="nav-link">AI Product</a>
-        <a href="#" class="nav-link">Shop</a>
-        <a href="#" class="nav-link">Consciousness</a>
-        <a href="#" class="nav-link">Company</a>
-    </nav>
+            <!-- ⭐ LEFT LOGO (ONLY YOUR WEBSITE NAME) -->
+            <div class="lg:w-3/12 flex items-center">
+                <a href="/" class="flex items-center gap-2 hover:opacity-80 transition-all">
 
-    <!-- RIGHT NAV -->
-    <div class="hidden lg:flex items-center gap-3">
-        <a href="#" class="nav-btn">Need Help</a>
-        <a href="#" class="nav-btn">Log In</a>
-        <a href="#" class="nav-btn-black">Get Started</a>
+                    <!-- TEXT LOGO -->
+                    <span class="font-semibold text-lg tracking-wide">
+                        varanasinath.com
+                    </span>
+
+                </a>
+            </div>
+
+            <!-- ⭐ CENTER NAV -->
+            <nav class="hidden lg:flex space-x-8 font-medium">
+                <a href="#" class="hover:text-gray-700">AI Product</a>
+                <a href="#" class="hover:text-gray-700">Shop</a>
+                <a href="#" class="hover:text-gray-700">Consciousness</a>
+                <a href="#" class="hover:text-gray-700">Company</a>
+            </nav>
+
+            <!-- ⭐ RIGHT NAV -->
+            <div class="hidden lg:flex items-center gap-3">
+                <a href="#" class="px-3 py-1 rounded-xl border border-black hover:bg-black hover:text-white transition">
+                    Help ?
+                </a>
+                <a href="#" class="px-3 py-1 rounded-xl border border-black hover:bg-black hover:text-white transition">
+                    Log In
+                </a>
+                <a href="#" class="px-4 py-2 rounded-xl bg-black text-white hover:bg-gray-800 transition">
+                    Get Started
+                </a>
+            </div>
+
+        </div>
     </div>
-
 </header>
 
-<!-- 🔥 HERO SECTION (no gap) -->
-<section class="hero">
+
+
+<!-- ⭐ HERO SECTION -->
+<section class="hero mt-24"> <!-- mt-24 = space so navbar doesn't overlap -->
     <img src="assets/images/hero.jpg" class="hero-image">
 
     <div class="hero-content fade-in">
-        <h1>Awaken Everything.</h1>
+        <h1>Attention is Everything.</h1>
         <button class="hero-btn">Begin the Journey →</button>
     </div>
 </section>
 
-<!-- dummy to allow scroll -->
-<div class="h-[150vh]"></div>
+
+<!-- Dummy content to test scrolling -->
+<div class="h-[200vh]"></div>
 
 <script src="script.js"></script>
 </body>
