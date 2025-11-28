@@ -1,6 +1,12 @@
+/* GLOBAL PARALLAX */
+body {
+    perspective: 1500px;
+}
+
 /* HERO SECTION */
 .hero-box {
     position: relative;
+    transform-style: preserve-3d;
 }
 
 /* Hero image box spacing */
@@ -13,6 +19,13 @@
     top: 0;
     left: 0;
     z-index: 0;
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+.smooth-tilt {
+    transition: transform 0.2s ease-out;
+    will-change: transform;
 }
 
 .hero-content {
@@ -21,6 +34,7 @@
     left: 8%;
     z-index: 2;
     color: white;
+    transform: translateZ(80px);
 }
 
 .hero-content h1 {
