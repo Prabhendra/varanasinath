@@ -14,23 +14,16 @@
 <body class="bg-white text-black overflow-y-scroll">
 
 <!-- ⭐ NAVBAR -->
-<header class="fixed w-full z-40 transition-all duration-200 bg-white bg-opacity-95 border-b border-gray-200 py-4 lg:py-0 top-0">
+<header class="fixed w-full z-40 transition-all duration-200 bg-white bg-opacity-95 border-b border-gray-200 py-4 top-0">
     <div class="px-6 lg:px-12">
         <div class="flex items-center justify-between">
 
-            <!-- ⭐ LEFT LOGO (ONLY YOUR WEBSITE NAME) -->
             <div class="lg:w-3/12 flex items-center">
                 <a href="/" class="flex items-center gap-2 hover:opacity-80 transition-all">
-
-                    <!-- TEXT LOGO -->
-                    <span class="font-semibold text-lg tracking-wide">
-                        varanasinath.com
-                    </span>
-
+                    <span class="font-semibold text-lg tracking-wide">varanasinath.com</span>
                 </a>
             </div>
 
-            <!-- ⭐ CENTER NAV -->
             <nav class="hidden lg:flex space-x-8 font-medium">
                 <a href="#" class="hover:text-gray-700">AI Product</a>
                 <a href="#" class="hover:text-gray-700">Shop</a>
@@ -38,17 +31,10 @@
                 <a href="#" class="hover:text-gray-700">Company</a>
             </nav>
 
-            <!-- ⭐ RIGHT NAV -->
             <div class="hidden lg:flex items-center gap-3">
-                <a href="#" class="px-3 py-1 rounded-xl border border-black hover:bg-black hover:text-white transition">
-                    Help ?
-                </a>
-                <a href="#" class="px-3 py-1 rounded-xl border border-black hover:bg-black hover:text-white transition">
-                    Log In
-                </a>
-                <a href="#" class="px-4 py-2 rounded-xl bg-black text-white hover:bg-gray-800 transition">
-                    Get Started
-                </a>
+                <a href="#" class="px-3 py-1 rounded-xl border border-black hover:bg-black hover:text-white transition">Help ?</a>
+                <a href="#" class="px-3 py-1 rounded-xl border border-black hover:bg-black hover:text-white transition">Log In</a>
+                <a href="#" class="px-4 py-2 rounded-xl bg-black text-white hover:bg-gray-800 transition">Get Started</a>
             </div>
 
         </div>
@@ -56,19 +42,20 @@
 </header>
 
 
-
 <!-- ⭐ HERO SECTION -->
-<section class="hero mt-24"> <!-- mt-24 = space so navbar doesn't overlap -->
-    <img src="assets/images/hero.jpg" class="hero-image">
+<section class="hero pt-[92px] px-4 lg:px-12"> <!-- Padding top = navbar height -->
+    
+    <div class="hero-box relative w-full h-[92vh] rounded-xl overflow-hidden">
+        <img src="assets/images/hero.jpg" class="hero-image">
 
-    <div class="hero-content fade-in">
-        <h1>Attention is Everything.</h1>
-        <button class="hero-btn">Begin the Journey →</button>
+        <div class="hero-content fade-in">
+            <h1>Attention is Everything.</h1>
+            <button class="hero-btn">Begin the Journey →</button>
+        </div>
     </div>
+
 </section>
 
-
-<!-- Dummy content to test scrolling -->
 <div class="h-[200vh]"></div>
 
 <script src="script.js"></script>
