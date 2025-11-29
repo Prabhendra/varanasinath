@@ -3,67 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>varanasinath.com</title>
-
-    <link rel="icon" type="image/png" href="assets/icons/icon.png">
-
-    <script src="https://cdn.tailwindcss.com"></script>
-
+    <title>KASHI</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<body>
 
-<body class="bg-white text-black overflow-y-scroll">
+<!-- NAVIGATION BAR -->
+<header class="navbar">
+    <div class="nav-left">
+        <h1 class="brand">KASHI</h1>
+    </div>
 
-<!-- ⭐ BLUE DOT PARTICLES (NEW) -->
-<canvas id="antigravityParticles"></canvas>
+    <nav class="nav-center">
+        <a href="#">AI-Product</a>
+        <a href="#">Energy</a>
+        <a href="#">Shop</a>
+        <a href="#">Consciousness</a>
+        <a href="#">Discover</a>
+    </nav>
 
-<!-- ⭐ NAVBAR -->
-<header class="fixed w-full z-40 transition-all duration-200 bg-white bg-opacity-95 border-b border-gray-200 py-4 top-0">
-    <div class="px-6 lg:px-12">
-        <div class="flex items-center justify-between">
-
-            <!-- LEFT LOGO -->
-            <div class="lg:w-3/12 flex items-center">
-                <a href="/" class="flex items-center gap-2 hover:opacity-80 transition-all">
-
-                    <img src="assets/icons/icon.png" class="w-8 h-8 rounded" alt="logo">
-
-                    <span class="font-semibold text-lg tracking-wide">varanasinath.com</span>
-                </a>
-            </div>
-
-            <!-- CENTER NAV -->
-            <nav class="hidden lg:flex space-x-8 font-medium">
-                <a href="#" class="hover:text-gray-700">AI Product</a>
-                <a href="#" class="hover:text-gray-700">Shop</a>
-                <a href="#" class="hover:text-gray-700">Consciousness</a>
-                <a href="#" class="hover:text-gray-700">Company</a>
-            </nav>
-
-            <!-- RIGHT NAV -->
-            <div class="hidden lg:flex items-center gap-3">
-                <a href="#" class="px-3 py-1 rounded-full border border-black hover:bg-black hover:text-white transition">Help ?</a>
-                <a href="#" class="px-3 py-1 rounded-full border border-black hover:bg-black hover:text-white transition">Log In</a>
-                <a href="#" class="px-4 py-2 rounded-xl bg-black text-white hover:bg-gray-800 transition">Get Started</a>
-            </div>
-
-        </div>
+    <div class="nav-right">
+        <span class="icon">?</span>
+        <span class="icon">🌐</span>
+        <span class="icon">👤</span>
     </div>
 </header>
 
-<!-- ⭐ HERO SECTION -->
-<section class="hero pt-[92px] px-4 lg:px-12">
-    <div class="hero-box relative w-full h-[92vh] rounded-xl overflow-hidden">
-        <img src="assets/images/hero.jpg" class="hero-image">
+<!-- HERO SECTION (SLIDER) -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Model Y</h1>
 
-        <div class="hero-content fade-in">
-            <h1>Attention is Everything.</h1>
-            <button class="hero-btn">Begin the Journey →</button>
+        <div class="buttons">
+            <button class="btn-primary">Order Now</button>
+            <button class="btn-secondary">Learn More</button>
         </div>
     </div>
-</section>
 
-<div class="h-[200vh]"></div>
+    <img src="car1.jpg" class="hero-img" alt="Car Image">
+</section>
 
 <script src="script.js"></script>
 </body>
