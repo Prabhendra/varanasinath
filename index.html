@@ -1,49 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KASHI</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KASHI – Official</title>
+
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    <nav>
-        <!-- Logo -->
-        <a href="#" class="logo">KASHI</a>
 
-        <!-- Center Navigation Menu -->
-        <ul class="nav-menu">
-            <li><a href="#ai-product">AI-Product</a></li>
-            <li><a href="#energy">Energy</a></li>
-            <li><a href="#shop">Shop</a></li>
-            <li><a href="#consciousness">Consciousness</a></li>
-            <li><a href="#discover">Discover</a></li>
-        </ul>
-
-        <!-- Right Side Icons -->
-        <div class="nav-right">
-            <!-- Help Icon -->
-            <svg class="help-icon nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10"></circle>
-                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
-                <line x1="12" y1="17" x2="12.01" y2="17"></line>
-            </svg>
-
-            <!-- Globe Icon -->
-            <svg class="globe-icon nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="2" y1="12" x2="22" y2="12"></line>
-                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-            </svg>
-
-            <!-- Account Icon -->
-            <svg class="account-icon nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                <circle cx="12" cy="7" r="4"></circle>
-            </svg>
+    <!-- ================= NAVIGATION BAR ================= -->
+    <header class="nav">
+        <div class="nav-left">
+            <span class="logo">KASHI</span>
         </div>
-    </nav>
 
-    <script src="script.js"></script>
+        <div class="nav-center">
+            <a href="#">AI-Tools</a>
+            <a href="#">Shop</a>
+            <a href="#">Energy</a>
+            <a href="#">Consciousness</a>
+            <a href="#">Discover</a>
+        </div>
+
+        <div class="nav-right">
+
+            <!-- HELP ICON -->
+            <button class="icon-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
+                    <path fill-rule="evenodd" d="M2.25 12c0-5.385..."></path>
+                </svg>
+            </button>
+
+            <!-- REGION ICON -->
+            <button class="icon-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
+                    <path d="M21.721 12.752a9.711..."></path>
+                </svg>
+            </button>
+
+            <!-- ACCOUNT ICON -->
+            <button class="icon-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" 
+                     viewBox="0 0 24 24" stroke="white" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M17.982 18.725A7.488..."></path>
+                </svg>
+            </button>
+
+        </div>
+    </header>
+
+    <!-- SCROLLABLE BLANK CONTENT -->
+    <div class="content"></div>
+
+<script src="script.js"></script>
 </body>
 </html>
