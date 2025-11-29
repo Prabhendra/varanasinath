@@ -1,87 +1,52 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-body {
-    background: #ffffff;
-    height: 200vh; /* scrollable */
-}
-
-/* ========== METALLIC BLACK NAVIGATION BAR ========== */
-.nav {
+/* REGION POPUP */
+.region-popup {
+    display: none;
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
-    height: 62px;
-    display: flex;
+    height: 100%;
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(5px);
+    z-index: 2000;
+    justify-content: center;
     align-items: center;
+}
+
+.popup-content {
+    width: 80%;
+    height: 70%;
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+.popup-header {
+    display: flex;
     justify-content: space-between;
-    padding: 0 35px;
-
-    /* ⭐ METALLIC BLACK GRADIENT ⭐ */
-    background: linear-gradient(to bottom, #2b2b2b, #0f0f0f);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-
-    backdrop-filter: blur(8px);
-    z-index: 1000;
+    margin-bottom: 20px;
 }
 
-/* LEFT LOGO */
-.logo {
-    font-size: 27px;
-    letter-spacing: 8px;
-    font-weight: 600;
-    color: white;
-}
-
-/* CENTER MENUS */
-.nav-center {
-    display: flex;
-    gap: 30px;
-}
-
-.nav-center a {
-    color: white;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 500;
-    padding: 8px 10px;
-    transition: .3s;
-}
-
-.nav-center a:hover {
-    background: rgba(255,255,255,0.2);
-    border-radius: 5px;
-}
-
-/* RIGHT ICON BUTTONS */
-.nav-right {
-    display: flex;
-    gap: 18px;
-}
-
-.icon-btn {
-    background: none;
-    border: none;
+.close-btn {
     cursor: pointer;
-    padding: 6px;
-    transition: 0.3s;
+    font-size: 22px;
 }
 
-.icon-btn:hover {
-    background: rgba(255,255,255,0.2);
-    border-radius: 50%;
+.region-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
 }
 
-.icon-btn svg {
-    width: 22px;
-    height: 22px;
+.region-section h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
 }
 
-/* BLANK SCROLL AREA */
-.content {
-    margin-top: 100px;
+.region-section p {
+    margin: 6px 0;
+    font-size: 14px;
+    cursor: pointer;
 }
