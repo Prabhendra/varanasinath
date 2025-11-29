@@ -10,7 +10,7 @@ body {
     height: 200vh; /* scrollable */
 }
 
-/* ========== NAVIGATION BAR ========== */
+/* ========== METALLIC BLACK NAVIGATION BAR ========== */
 .nav {
     position: fixed;
     top: 0;
@@ -20,7 +20,11 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 0 35px;
-    background: rgba(0, 0, 0, 0.4);
+
+    /* ⭐ METALLIC BLACK GRADIENT ⭐ */
+    background: linear-gradient(to bottom, #2b2b2b, #0f0f0f);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
     backdrop-filter: blur(8px);
     z-index: 1000;
 }
@@ -77,7 +81,7 @@ body {
     height: 22px;
 }
 
-/* BLANK SCROLL */
+/* BLANK SCROLL AREA */
 .content {
     margin-top: 100px;
 }
