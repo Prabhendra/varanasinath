@@ -1,22 +1,22 @@
-// Get all menu items
-const menuItems = document.querySelectorAll(".menu-item");
-const dropdown = document.querySelector(".dropdown");
-const panels = document.querySelectorAll(".dropdown-panel");
+// JavaScript for future interactivity
+// Currently no JS needed for basic navbar
 
-// Show dropdown on hover
-menuItems.forEach(item => {
-    item.addEventListener("mouseenter", () => {
-        const target = item.getAttribute("data-target");
-
-        dropdown.style.display = "grid";
-
-        panels.forEach(panel => {
-            panel.style.display = panel.id === target ? "block" : "none";
-        });
+// Example: Add smooth scroll behavior
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
     });
 });
 
-// Hide dropdown when mouse leaves whole area
-dropdown.addEventListener("mouseleave", () => {
-    dropdown.style.display = "none";
+// Example: Log when icons are clicked
+document.querySelectorAll('.nav-icon').forEach(icon => {
+    icon.addEventListener('click', function() {
+        console.log('Icon clicked:', this.classList[0]);
+    });
 });
