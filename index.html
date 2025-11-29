@@ -3,45 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KASHI</title>
+    <title>KASHI Navigation</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!-- NAVIGATION BAR -->
-<header class="navbar">
-    <div class="nav-left">
-        <h1 class="brand">KASHI</h1>
-    </div>
+<!-- 🔥 TESLA STYLE NAVIGATION BAR -->
+<header class="nav">
+    <!-- Logo -->
+    <div class="logo">KASHI</div>
 
-    <nav class="nav-center">
-        <a href="#">AI-Product</a>
-        <a href="#">Energy</a>
-        <a href="#">Shop</a>
-        <a href="#">Consciousness</a>
-        <a href="#">Discover</a>
+    <!-- Main Menu -->
+    <nav class="menu">
+        <div class="menu-item" data-target="ai">AI-Product</div>
+        <div class="menu-item" data-target="energy">Energy</div>
+        <div class="menu-item" data-target="shop">Shop</div>
+        <div class="menu-item" data-target="consciousness">Consciousness</div>
+        <div class="menu-item" data-target="discover">Discover</div>
     </nav>
 
-    <div class="nav-right">
-        <span class="icon">?</span>
-        <span class="icon">🌐</span>
-        <span class="icon">👤</span>
+    <!-- Right Icons -->
+    <div class="nav-icons">
+        <span>❓</span>
+        <span>🌐</span>
+        <span>👤</span>
     </div>
 </header>
 
-<!-- HERO SECTION (SLIDER) -->
-<section class="hero">
-    <div class="hero-content">
-        <h1>Model Y</h1>
-
-        <div class="buttons">
-            <button class="btn-primary">Order Now</button>
-            <button class="btn-secondary">Learn More</button>
-        </div>
+<!-- ⭐ Mega Dropdown Container -->
+<div class="dropdown">
+    <!-- AI PRODUCT -->
+    <div class="dropdown-panel" id="ai">
+        <h2>AI-Product</h2>
+        <a href="#">Models</a>
+        <a href="#">Agents</a>
+        <a href="#">Automation Tools</a>
+        <a href="#">Enterprise Solutions</a>
     </div>
 
-    <img src="car1.jpg" class="hero-img" alt="Car Image">
-</section>
+    <!-- ENERGY -->
+    <div class="dropdown-panel" id="energy">
+        <h2>Energy</h2>
+        <a href="#">Solar Roof</a>
+        <a href="#">Powerwall</a>
+        <a href="#">Grid Systems</a>
+    </div>
+
+    <!-- SHOP -->
+    <div class="dropdown-panel" id="shop">
+        <h2>Shop</h2>
+        <a href="#">Accessories</a>
+        <a href="#">Lifestyle</a>
+        <a href="#">Merch</a>
+    </div>
+
+    <!-- CONSCIOUSNESS -->
+    <div class="dropdown-panel" id="consciousness">
+        <h2>Consciousness</h2>
+        <a href="#">Meditation</a>
+        <a href="#">Awareness</a>
+        <a href="#">Mind-Tech</a>
+    </div>
+
+    <!-- DISCOVER -->
+    <div class="dropdown-panel" id="discover">
+        <h2>Discover</h2>
+        <a href="#">Stories</a>
+        <a href="#">Technology</a>
+        <a href="#">Community</a>
+    </div>
+</div>
 
 <script src="script.js"></script>
 </body>
