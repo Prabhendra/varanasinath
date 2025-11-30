@@ -1,33 +1,35 @@
 console.log("Navbar Loaded Successfully");
 
-// =========== REGION MODAL FUNCTIONALITY ===========
-
+// ========== GET MODAL ELEMENTS ==========
 const modal = document.getElementById("region-modal");
 const openBtn = document.getElementById("open-region-modal");
 const closeBtn = document.getElementById("close-region-modal");
 
+// ========== CHECK IF ALL ELEMENTS EXIST ==========
 if (modal && openBtn && closeBtn) {
-    // Open modal
+    
+    // ========== OPEN MODAL ==========
     openBtn.addEventListener("click", () => {
         modal.classList.add("show");
-        document.body.style.overflow = "hidden";
+        document.body.style.overflow = "hidden"; // Prevent scroll
     });
 
-    // Close modal
+    // ========== CLOSE MODAL ==========
     closeBtn.addEventListener("click", () => {
         modal.classList.remove("show");
-        document.body.style.overflow = "auto";
+        document.body.style.overflow = "auto"; // Allow scroll
     });
 
-    // Close when clicking backdrop
-    modal.addEventListener("click", (e) => {
-        if (e.target.classList.contains("modal-backdrop")) {
+    // ========== CLOSE ON BACKDROP CLICK ==========
+    const backdrop = document.querySelector(".modal-backdrop");
+    backdrop.addEventListener("click", (e) => {
+        if (e.target === backdrop) {
             modal.classList.remove("show");
             document.body.style.overflow = "auto";
         }
     });
 
-    // Close on ESC key
+    // ========== CLOSE ON ESC KEY ==========
     document.addEventListener("keydown", (e) => {
         if (e.key === "Escape" && modal.classList.contains("show")) {
             modal.classList.remove("show");
@@ -35,28 +37,48 @@ if (modal && openBtn && closeBtn) {
         }
     });
 
-    // Handle country selection
+    // ========== HANDLE COUNTRY SELECTION ==========
     const countryButtons = document.querySelectorAll(".country");
+    
     countryButtons.forEach(btn => {
-        btn.addEventListener("click", (e) => {
-            // Remove active from all
+        btn.addEventListener("click", function(e) {
+            // Prevent default and stop propagation
+            e.preventDefault();
+            e.stopPropagation();
+            
+            // Remove active class from all buttons
             countryButtons.forEach(b => {
                 b.classList.remove("active");
             });
 
-            // Add active to clicked
-            btn.classList.add("active");
+            // Add active class to clicked button
+            this.classList.add("active");
 
-            // Get selected region
-            const selectedRegion = btn.getAttribute("data-region");
-            const selectedCountry = btn.textContent.trim().split("\n")[0];
+            // Get selected data
+            const selectedRegion = this.getAttribute("data-region");
+            const selectedCountry = this.textContent.split("\n")[0].trim();
 
+            // Log to console
             console.log("Selected Region:", selectedRegion);
             console.log("Selected Country:", selectedCountry);
+            
+            // Optional: Send data to backend
+            // fetch('/api/set-region', {
+            //     method: 'POST',
+            //     headers: { 'Content-Type': 'application/json' },
+            //     body: JSON.stringify({ 
+            //         region: selectedRegion, 
+            //         country: selectedCountry 
+            //     })
+            // });
         });
     });
 
     console.log("Region Modal Initialized Successfully");
+    
 } else {
     console.log("Warning: Modal elements not found");
+    if (!modal) console.log("Missing: region-modal");
+    if (!openBtn) console.log("Missing: open-region-modal");
+    if (!closeBtn) console.log("Missing: close-region-modal");
 }

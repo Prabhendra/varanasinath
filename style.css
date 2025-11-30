@@ -1,3 +1,4 @@
+/* ========== UNIVERSAL RESET ========== */
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +11,7 @@ body {
     height: 200vh;
 }
 
-/* ========== METALLIC BLACK NAVIGATION BAR ========== */
+/* ========== NAVIGATION BAR ========== */
 .nav {
     position: fixed;
     top: 0;
@@ -20,15 +21,12 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 0 35px;
-
     background: linear-gradient(to bottom, #2b2b2b, #0f0f0f);
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-
     backdrop-filter: blur(8px);
     z-index: 1000;
 }
 
-/* LEFT LOGO */
 .logo {
     font-size: 27px;
     letter-spacing: 8px;
@@ -36,7 +34,6 @@ body {
     color: white;
 }
 
-/* CENTER MENUS */
 .nav-center {
     display: flex;
     gap: 30px;
@@ -56,7 +53,6 @@ body {
     border-radius: 5px;
 }
 
-/* RIGHT ICON BUTTONS */
 .nav-right {
     display: flex;
     gap: 18px;
@@ -80,12 +76,11 @@ body {
     height: 22px;
 }
 
-/* BLANK SCROLL AREA */
 .content {
     margin-top: 100px;
 }
 
-/* ========== REGION/LANGUAGE MODAL ========== */
+/* ========== MODAL STYLING ========== */
 
 .modal {
     position: fixed;
@@ -107,10 +102,9 @@ body {
     backdrop-filter: blur(2px);
 }
 
-/* Modal Panel */
 .modal-panel {
     position: relative;
-    width: min(1200px, 100vw - 40px);
+    width: min(1400px, 100vw - 40px);
     max-height: calc(100vh - 80px);
     background: #ffffff;
     border-radius: 16px;
@@ -158,16 +152,15 @@ body {
     color: #000;
 }
 
-/* Grid Layout - 4 columns */
+/* Modal Content Grid */
 .modal-content {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 28px;
     overflow-y: auto;
     padding-right: 8px;
 }
 
-/* Scrollbar styling */
 .modal-content::-webkit-scrollbar {
     width: 6px;
 }
@@ -196,7 +189,7 @@ body {
     color: #666;
 }
 
-/* Country Button */
+/* Country Button - FIXED */
 .country {
     display: block;
     width: 100%;
@@ -212,6 +205,12 @@ body {
     color: #1a1a1a;
     transition: all 0.15s ease;
     font-family: inherit;
+    position: relative;
+    z-index: 10;
+}
+
+.country:focus {
+    outline: none;
 }
 
 .country span {
@@ -219,6 +218,7 @@ body {
     font-size: 12px;
     color: #888;
     margin-top: 2px;
+    pointer-events: none;
 }
 
 .country:hover {
@@ -231,21 +231,29 @@ body {
 }
 
 .country.active {
-    background: #f0f0f0;
+    background: #0066cc;
     border-color: #0066cc;
-    color: #0066cc;
+    color: #ffffff;
     font-weight: 600;
 }
 
 .country.active span {
-    color: #0066cc;
+    color: #e6f0ff;
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
+/* ========== RESPONSIVE DESIGN ========== */
+
+@media (max-width: 1200px) {
+    .modal-content {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
     .modal-content {
         grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+        gap: 16px;
     }
 }
 
