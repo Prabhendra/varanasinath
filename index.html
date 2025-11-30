@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KASHI – Official</title>
-
     <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -25,8 +24,7 @@
         </div>
 
         <div class="nav-right">
-
-            <!-- UPDATED HELP ICON (Perfect Rendering) -->
+            <!-- HELP ICON -->
             <button class="icon-btn">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
                     <path fill-rule="evenodd"
@@ -35,8 +33,8 @@
                 </svg>
             </button>
 
-            <!-- REGION ICON -->
-            <button class="icon-btn">
+            <!-- REGION ICON - TRIGGER BUTTON -->
+            <button class="icon-btn" id="open-region-modal">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
                     <path d="M21.721 12.752a9.711 9.711 0 0 0-.945-5.003 12.754 12.754 0 0 1-4.339 2.708 18.991 18.991 0 0 1-.214 4.772 17.165 17.165 0 0 0 5.498-2.477ZM14.634 15.55a17.324 17.324 0 0 0 .332-4.647c-.952.227-1.945.347-2.966.347-1.021 0-2.014-.12-2.966-.347a17.515 17.515 0 0 0 .332 4.647 17.385 17.385 0 0 0 5.268 0ZM9.772 17.119a18.963 18.963 0 0 0 4.456 0A17.182 17.182 0 0 1 12 21.724a17.18 17.18 0 0 1-2.228-4.605ZM7.777 15.23a18.87 18.87 0 0 1-.214-4.774 12.753 12.753 0 0 1-4.34-2.708 9.711 9.711 0 0 0-.944 5.004 17.165 17.165 0 0 0 5.498 2.477ZM21.356 14.752a9.765 9.765 0 0 1-7.478 6.817 18.64 18.64 0 0 0 1.988-4.718 18.627 18.627 0 0 0 5.49-2.098ZM2.644 14.752c1.682.971 3.53 1.688 5.49 2.099a18.64 18.64 0 0 0 1.988 4.718 9.765 9.765 0 0 1-7.478-6.816ZM13.878 2.43a9.755 9.755 0 0 1 6.116 3.986 11.267 11.267 0 0 1-3.746 2.504 18.63 18.63 0 0 0-2.37-6.49ZM12 2.276a17.152 17.152 0 0 1 2.805 7.121c-.897.23-1.837.353-2.805.353-.968 0-1.908-.122-2.805-.353A17.151 17.151 0 0 1 12 2.276ZM10.122 2.43a18.629 18.629 0 0 0-2.37 6.49 11.266 11.266 0 0 1-3.746-2.504 9.754 9.754 0 0 1 6.116-3.985Z"/>
                 </svg>
@@ -50,9 +48,95 @@
                           d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
                 </svg>
             </button>
-
         </div>
     </header>
+
+    <!-- ================= REGION/LANGUAGE MODAL ================= -->
+    <div id="region-modal" class="modal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-panel">
+            <div class="modal-header">
+                <h2>Choose your country or region</h2>
+                <button class="close-btn" id="close-region-modal">&times;</button>
+            </div>
+
+            <div class="modal-content">
+                <!-- Column 1: North America -->
+                <div class="region-column">
+                    <h3>North America</h3>
+                    <button class="country" data-region="US">United States <span>English</span></button>
+                    <button class="country" data-region="CA">Canada <span>English · Français</span></button>
+                    <button class="country" data-region="MX">México <span>Español</span></button>
+                    <button class="country" data-region="PR">Puerto Rico <span>English · Español</span></button>
+
+                    <h3 style="margin-top: 24px;">South America</h3>
+                    <button class="country" data-region="CL">Chile <span>Español</span></button>
+                    <button class="country" data-region="CO">Colombia <span>Español</span></button>
+                </div>
+
+                <!-- Column 2: Asia Pacific -->
+                <div class="region-column">
+                    <h3>Asia Pacific</h3>
+                    <button class="country" data-region="CN">中国大陆 <span>简体中文</span></button>
+                    <button class="country" data-region="HK">Hong Kong <span>繁體中文 · English</span></button>
+                    <button class="country" data-region="MO">Macau <span>繁體中文 · English</span></button>
+                    <button class="country" data-region="TW">台灣 <span>繁體中文</span></button>
+                    <button class="country" data-region="IN">India <span>English</span></button>
+                    <button class="country" data-region="JP">日本 <span>日本語</span></button>
+                    <button class="country" data-region="MY">Malaysia <span>English</span></button>
+                    <button class="country" data-region="SG">Singapore <span>English</span></button>
+                    <button class="country" data-region="TH">Thailand <span>ภาษาไทย · English</span></button>
+                    <button class="country" data-region="KR">대한민국 <span>한국어</span></button>
+                    <button class="country" data-region="AU">Australia <span>English</span></button>
+                    <button class="country" data-region="NZ">New Zealand <span>English</span></button>
+                    <button class="country" data-region="PH">Philippines <span>English</span></button>
+                </div>
+
+                <!-- Column 3: Middle East & Europe -->
+                <div class="region-column">
+                    <h3>Middle East</h3>
+                    <button class="country" data-region="IL">Israel <span>עברית</span></button>
+                    <button class="country" data-region="AE">UAE <span>English · العربية</span></button>
+                    <button class="country" data-region="JO">Jordan <span>English</span></button>
+                    <button class="country" data-region="QA">Qatar <span>English · العربية</span></button>
+                    <button class="country" data-region="SA">Saudi Arabia <span>English · العربية</span></button>
+
+                    <h3 style="margin-top: 24px;">Europe</h3>
+                    <button class="country" data-region="BE">Belgium <span>Nederlands · Français</span></button>
+                    <button class="country" data-region="CZ">Česká republika <span>Čeština</span></button>
+                    <button class="country" data-region="DK">Danmark <span>Dansk</span></button>
+                    <button class="country" data-region="DE">Deutschland <span>Deutsch</span></button>
+                    <button class="country" data-region="FR">France <span>Français</span></button>
+                </div>
+
+                <!-- Column 4: Europe continued -->
+                <div class="region-column">
+                    <h3>Europe</h3>
+                    <button class="country" data-region="GR">Ελλάδα <span>Ελληνικά</span></button>
+                    <button class="country" data-region="HR">Hrvatska <span>Hrvatski</span></button>
+                    <button class="country" data-region="HU">Magyarország <span>Magyar</span></button>
+                    <button class="country" data-region="IE">Ireland <span>English</span></button>
+                    <button class="country" data-region="IS">Ísland <span>Íslenska</span></button>
+                    <button class="country" data-region="IT">Italia <span>Italiano</span></button>
+                    <button class="country" data-region="LT">Lietuva <span>Lietuvių</span></button>
+                    <button class="country" data-region="LU">Luxembourg <span>Français · Deutsch</span></button>
+                    <button class="country" data-region="NL">Nederland <span>Nederlands</span></button>
+                    <button class="country" data-region="NO">Norge <span>Norsk</span></button>
+                    <button class="country" data-region="AT">Österreich <span>Deutsch</span></button>
+                    <button class="country" data-region="PL">Polska <span>Polski</span></button>
+                    <button class="country" data-region="PT">Portugal <span>Português</span></button>
+                    <button class="country" data-region="RO">România <span>Română</span></button>
+                    <button class="country" data-region="SI">Slovenija <span>Slovenščina</span></button>
+                    <button class="country" data-region="ES">España <span>Español</span></button>
+                    <button class="country" data-region="CH">Switzerland <span>Français · Deutsch · Italiano</span></button>
+                    <button class="country" data-region="SE">Sverige <span>Svenska</span></button>
+                    <button class="country" data-region="FI">Suomi <span>Suomi</span></button>
+                    <button class="country" data-region="TR">Türkiye <span>Türkçe</span></button>
+                    <button class="country" data-region="GB">United Kingdom <span>English</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="content"></div>
 
