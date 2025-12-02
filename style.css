@@ -81,6 +81,7 @@ body {
 }
 
 /* ========== MODAL STYLING ========== */
+
 .modal {
     position: fixed;
     inset: 0;
@@ -188,7 +189,7 @@ body {
     color: #666;
 }
 
-/* Country Button */
+/* Country Button - FIXED */
 .country {
     display: block;
     width: 100%;
@@ -229,7 +230,6 @@ body {
     transform: scale(0.98);
 }
 
-/* Default active (blue) */
 .country.active {
     background: #0066cc;
     border-color: #0066cc;
@@ -241,15 +241,8 @@ body {
     color: #e6f0ff;
 }
 
-/* Special style for India language selections (orange) */
-.country.active.india-lang {
-    background: #FF9500;
-    border-color: #FF9500;
-    color: #ffffff;
-    font-weight: 600;
-}
-
 /* ========== RESPONSIVE DESIGN ========== */
+
 @media (max-width: 1200px) {
     .modal-content {
         grid-template-columns: repeat(3, 1fr);
@@ -272,19 +265,24 @@ body {
         border-radius: 0;
         padding: 20px;
     }
+
     .modal-header {
         margin-bottom: 16px;
     }
+
     .modal-content {
         grid-template-columns: 1fr;
         gap: 16px;
     }
+
     .modal-header h2 {
         font-size: 18px;
     }
+
     .nav-center {
         gap: 15px;
     }
+
     .nav-center a {
         font-size: 12px;
     }

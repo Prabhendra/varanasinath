@@ -11,10 +11,12 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
+
 body {
     background: #ffffff;
     height: 200vh;
 }
+
 .nav {
     position: fixed;
     top: 0;
@@ -29,16 +31,19 @@ body {
     backdrop-filter: blur(8px);
     z-index: 1000;
 }
+
 .logo {
     font-size: 27px;
     letter-spacing: 8px;
     font-weight: 600;
     color: white;
 }
+
 .nav-center {
     display: flex;
     gap: 30px;
 }
+
 .nav-center a {
     color: white;
     text-decoration: none;
@@ -47,14 +52,17 @@ body {
     padding: 8px 10px;
     transition: .3s;
 }
+
 .nav-center a:hover {
     background: rgba(255, 255, 255, 0.2);
     border-radius: 5px;
 }
+
 .nav-right {
     display: flex;
     gap: 18px;
 }
+
 .icon-btn {
     background: none;
     border: none;
@@ -62,17 +70,21 @@ body {
     padding: 6px;
     transition: 0.3s;
 }
+
 .icon-btn:hover {
     background: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
 }
+
 .icon-btn svg {
     width: 22px;
     height: 22px;
 }
+
 .content {
     margin-top: 100px;
 }
+
 .modal {
     position: fixed;
     inset: 0;
@@ -81,15 +93,18 @@ body {
     justify-content: center;
     z-index: 2000;
 }
+
 .modal.show {
     display: flex;
 }
+
 .modal-backdrop {
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(2px);
 }
+
 .modal-panel {
     position: relative;
     width: min(1400px, 100vw - 40px);
@@ -102,6 +117,7 @@ body {
     display: flex;
     flex-direction: column;
 }
+
 .modal-header {
     display: flex;
     justify-content: space-between;
@@ -110,12 +126,14 @@ body {
     padding-bottom: 16px;
     border-bottom: 1px solid #e5e5e5;
 }
+
 .modal-header h2 {
     font-size: 22px;
     font-weight: 600;
     margin: 0;
     color: #1a1a1a;
 }
+
 .close-btn {
     background: transparent;
     border: none;
@@ -131,9 +149,11 @@ body {
     align-items: center;
     justify-content: center;
 }
+
 .close-btn:hover {
     color: #000;
 }
+
 .modal-content {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -141,20 +161,25 @@ body {
     overflow-y: auto;
     padding-right: 8px;
 }
+
 .modal-content::-webkit-scrollbar {
     width: 6px;
 }
+
 .modal-content::-webkit-scrollbar-track {
     background: #f0f0f0;
     border-radius: 10px;
 }
+
 .modal-content::-webkit-scrollbar-thumb {
     background: #d0d0d0;
     border-radius: 10px;
 }
+
 .modal-content::-webkit-scrollbar-thumb:hover {
     background: #999;
 }
+
 .region-column h3 {
     font-size: 13px;
     font-weight: 700;
@@ -163,6 +188,7 @@ body {
     margin: 0 0 12px;
     color: #666;
 }
+
 .country {
     display: block;
     width: 100%;
@@ -181,16 +207,20 @@ body {
     position: relative;
     z-index: 10;
 }
+
 .country:focus {
     outline: none;
 }
+
 .country:hover {
     background: #f5f5f5;
     border-color: #e0e0e0;
 }
+
 .country:active {
     transform: scale(0.98);
 }
+
 /* BLUE for other countries */
 .country.active {
     background: #0066cc;
@@ -198,6 +228,7 @@ body {
     color: #ffffff;
     font-weight: 600;
 }
+
 /* ORANGE for India selections */
 .country.active.india-lang {
     background: #FF9500;
@@ -205,18 +236,21 @@ body {
     color: #ffffff;
     font-weight: 600;
 }
+
 @media (max-width: 1200px) {
     .modal-content {
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
     }
 }
+
 @media (max-width: 768px) {
     .modal-content {
         grid-template-columns: repeat(2, 1fr);
         gap: 16px;
     }
 }
+
 @media (max-width: 640px) {
     .modal-panel {
         width: 100%;
@@ -225,19 +259,24 @@ body {
         border-radius: 0;
         padding: 20px;
     }
+
     .modal-header {
         margin-bottom: 16px;
     }
+
     .modal-content {
         grid-template-columns: 1fr;
         gap: 16px;
     }
+
     .modal-header h2 {
         font-size: 18px;
     }
+
     .nav-center {
         gap: 15px;
     }
+
     .nav-center a {
         font-size: 12px;
     }
@@ -250,6 +289,7 @@ body {
         <div class="nav-left">
             <span class="logo">KASHI</span>
         </div>
+
         <div class="nav-center">
             <a href="#">AI-Tools</a>
             <a href="#" class="shop-link">Shop</a>
@@ -257,18 +297,18 @@ body {
             <a href="#">Consciousness</a>
             <a href="#">Discover</a>
         </div>
+
         <div class="nav-right">
             <button class="icon-btn">
-                <!-- SVG ICON HERE -->
-                <!-- ... (keep as is) ... -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm11.378-3.917c-.89-.777-2.366-.777-3.255 0a.75.75 0 0 1-.988-1.129c1.454-1.272 3.776-1.272 5.23 0 1.513 1.324 1.513 3.518 0 4.842a3.75 3.75 0 0 1-.837.552c-.676.328-1.028.774-1.028 1.152v.75a.75.75 0 0 1-1.5 0v-.75c0-1.279 1.06-2.107 1.875-2.502.182-.088.351-.199.503-.331.83-.727.83-1.857 0-2.584ZM12 18a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clip-rule="evenodd" /></svg>
             </button>
+
             <button class="icon-btn" id="open-region-modal">
-                <!-- SVG ICON HERE -->
-                <!-- ... (keep as is) ... -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M21.721 12.752a9.711 9.711 0 0 0-.945-5.003 12.754 12.754 0 0 1-4.339 2.708 18.991 18.991 0 0 1-.214 4.772 17.165 17.165 0 0 0 5.498-2.477ZM14.634 15.55a17.324 17.324 0 0 0 .332-4.647c-.952.227-1.945.347-2.966.347-1.021 0-2.014-.12-2.966-.347a17.515 17.515 0 0 0 .332 4.647 17.385 17.385 0 0 0 5.268 0ZM9.772 17.119a18.963 18.963 0 0 0 4.456 0A17.182 17.182 0 0 1 12 21.724a17.18 17.18 0 0 1-2.228-4.605ZM7.777 15.23a18.87 18.87 0 0 1-.214-4.774 12.753 12.753 0 0 1-4.34-2.708 9.711 9.711 0 0 0-.944 5.004 17.165 17.165 0 0 0 5.498 2.477ZM21.356 14.752a9.765 9.765 0 0 1-7.478 6.817 18.64 18.64 0 0 0 1.988-4.718 18.627 18.627 0 0 0 5.49-2.098ZM2.644 14.752c1.682.971 3.53 1.688 5.49 2.099a18.64 18.64 0 0 0 1.988 4.718 9.765 9.765 0 0 1-7.478-6.816ZM13.878 2.43a9.755 9.755 0 0 1 6.116 3.986 11.267 11.267 0 0 1-3.746 2.504 18.63 18.63 0 0 0-2.37-6.49ZM12 2.276a17.152 17.152 0 0 1 2.805 7.121c-.897.23-1.837.353-2.805.353-.968 0-1.908-.122-2.805-.353A17.151 17.151 0 0 1 12 2.276ZM10.122 2.43a18.629 18.629 0 0 0-2.37 6.49 11.266 11.266 0 0 1-3.746-2.504 9.754 9.754 0 0 1 6.116-3.985Z"/></svg>
             </button>
+
             <button class="icon-btn">
-                <!-- SVG ICON HERE -->
-                <!-- ... (keep as is) ... -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg>
             </button>
         </div>
     </header>
@@ -280,23 +320,94 @@ body {
                 <h2>Choose your country or region</h2>
                 <button class="close-btn" id="close-region-modal">&times;</button>
             </div>
+
             <div class="modal-content">
-                <!-- Regions and countries (all columns as in your code, unchanged) -->
-                <!-- ... (leave all your region content exactly as given) ... -->
-                <!-- E.g., India column with correct ids and classes -->
+                <!-- Column 1: North America -->
                 <div class="region-column">
-                <h3>India</h3>
-                <button class="country india-lang" data-region="IN-EN" id="india-default">English <span style="color:#fff5e6; font-size:12px;">अंग्रेजी</span></button>
-                <button class="country india-lang" data-region="IN-HI">हिन्दी <span style="color:#fff5e6; font-size:12px;">Hindi</span></button>
-                <button class="country india-lang" data-region="IN-TA">தமிழ் <span style="color:#fff5e6; font-size:12px;">Tamil</span></button>
-                <button class="country india-lang" data-region="IN-TE">తెలుగు <span style="color:#fff5e6; font-size:12px;">Telugu</span></button>
-                <button class="country india-lang" data-region="IN-KA">ಕನ್ನಡ <span style="color:#fff5e6; font-size:12px;">Kannada</span></button>
-                <button class="country india-lang" data-region="IN-ML">മലയാളം <span style="color:#fff5e6; font-size:12px;">Malayalam</span></button>
-                <button class="country india-lang" data-region="IN-MR">मराठी <span style="color:#fff5e6; font-size:12px;">Marathi</span></button>
-                <button class="country india-lang" data-region="IN-GU">ગુજરાતી <span style="color:#fff5e6; font-size:12px;">Gujarati</span></button>
-                <button class="country india-lang" data-region="IN-PA">ਪੰਜਾਬੀ <span style="color:#fff5e6; font-size:12px;">Punjabi</span></button>
+                    <h3>North America</h3>
+                    <button class="country" data-region="US">United States <span style="color:#999; font-size:12px;">English</span></button>
+                    <button class="country" data-region="CA">Canada <span style="color:#999; font-size:12px;">English · Français</span></button>
+                    <button class="country" data-region="MX">México <span style="color:#999; font-size:12px;">Español</span></button>
+                    <button class="country" data-region="PR">Puerto Rico <span style="color:#999; font-size:12px;">English · Español</span></button>
+
+                    <h3 style="margin-top: 24px;">South America</h3>
+                    <button class="country" data-region="CL">Chile <span style="color:#999; font-size:12px;">Español</span></button>
+                    <button class="country" data-region="CO">Colombia <span style="color:#999; font-size:12px;">Español</span></button>
                 </div>
-                <!-- ... Rest of columns etc, unchanged ... -->
+
+                <!-- Column 2: Asia Pacific -->
+                <div class="region-column">
+                    <h3>Asia Pacific</h3>
+                    <button class="country" data-region="CN-ZH">中国大陆 <span style="color:#999; font-size:12px;">简体中文</span></button>
+                    <button class="country" data-region="HK">繁體中文 <span style="color:#999; font-size:12px;">English</span></button>
+                    <button class="country" data-region="MO">繁體中文 <span style="color:#999; font-size:12px;">English</span></button>
+                    <button class="country" data-region="TW">台灣 <span style="color:#999; font-size:12px;">繁體中文</span></button>
+                    <button class="country" data-region="JP">日本 <span style="color:#999; font-size:12px;">日本語</span></button>
+                    <button class="country" data-region="MY">Malaysia <span style="color:#999; font-size:12px;">English</span></button>
+                    <button class="country" data-region="SG">Singapore <span style="color:#999; font-size:12px;">English</span></button>
+                    <button class="country" data-region="TH">Thailand <span style="color:#999; font-size:12px;">ภาษาไทย · English</span></button>
+                    <button class="country" data-region="KR">대한민국 <span style="color:#999; font-size:12px;">한국어</span></button>
+                    <button class="country" data-region="AU">Australia <span style="color:#999; font-size:12px;">English</span></button>
+                    <button class="country" data-region="NZ">New Zealand <span style="color:#999; font-size:12px;">English</span></button>
+                    <button class="country" data-region="PH">Philippines <span style="color:#999; font-size:12px;">English</span></button>
+                </div>
+
+                <!-- Column 3: India -->
+                <div class="region-column">
+                    <h3>India</h3>
+                    <button class="country india-lang" data-region="IN-EN" id="india-default">English <span style="color:#fff5e6; font-size:12px;">अंग्रेजी</span></button>
+                    <button class="country india-lang" data-region="IN-HI">हिन्दी <span style="color:#fff5e6; font-size:12px;">Hindi</span></button>
+                    <button class="country india-lang" data-region="IN-TA">தமிழ் <span style="color:#fff5e6; font-size:12px;">Tamil</span></button>
+                    <button class="country india-lang" data-region="IN-TE">తెలుగు <span style="color:#fff5e6; font-size:12px;">Telugu</span></button>
+                    <button class="country india-lang" data-region="IN-KA">ಕನ್ನಡ <span style="color:#fff5e6; font-size:12px;">Kannada</span></button>
+                    <button class="country india-lang" data-region="IN-ML">മലയാളം <span style="color:#fff5e6; font-size:12px;">Malayalam</span></button>
+                    <button class="country india-lang" data-region="IN-MR">मराठी <span style="color:#fff5e6; font-size:12px;">Marathi</span></button>
+                    <button class="country india-lang" data-region="IN-GU">ગુજરાતી <span style="color:#fff5e6; font-size:12px;">Gujarati</span></button>
+                    <button class="country india-lang" data-region="IN-PA">ਪੰਜਾਬੀ <span style="color:#fff5e6; font-size:12px;">Punjabi</span></button>
+                </div>
+
+                <!-- Column 4: Middle East & Europe -->
+                <div class="region-column">
+                    <h3>Middle East</h3>
+                    <button class="country" data-region="IL">Israel <span style="color:#999; font-size:12px;">עברית</span></button>
+                    <button class="country" data-region="AE">UAE <span style="color:#999; font-size:12px;">English · العربية</span></button>
+                    <button class="country" data-region="JO">Jordan <span style="color:#999; font-size:12px;">English</span></button>
+                    <button class="country" data-region="QA">Qatar <span style="color:#999; font-size:12px;">English · العربية</span></button>
+                    <button class="country" data-region="SA">Saudi Arabia <span style="color:#999; font-size:12px;">English · العربية</span></button>
+
+                    <h3 style="margin-top: 24px;">Europe</h3>
+                    <button class="country" data-region="BE">Belgium <span style="color:#999; font-size:12px;">Nederlands · Français</span></button>
+                    <button class="country" data-region="CZ">Česká republika <span style="color:#999; font-size:12px;">Čeština</span></button>
+                    <button class="country" data-region="DK">Danmark <span style="color:#999; font-size:12px;">Dansk</span></button>
+                    <button class="country" data-region="DE">Deutschland <span style="color:#999; font-size:12px;">Deutsch</span></button>
+                </div>
+
+                <!-- Column 5: Europe continued -->
+                <div class="region-column">
+                    <h3>Europe</h3>
+                    <button class="country" data-region="FR">France <span style="color:#999; font-size:12px;">Français</span></button>
+                    <button class="country" data-region="GR">Ελλάδα <span style="color:#999; font-size:12px;">Ελληνικά</span></button>
+                    <button class="country" data-region="HR">Hrvatska <span style="color:#999; font-size:12px;">Hrvatski</span></button>
+                    <button class="country" data-region="HU">Magyarország <span style="color:#999; font-size:12px;">Magyar</span></button>
+                    <button class="country" data-region="IE">Ireland <span style="color:#999; font-size:12px;">English</span></button>
+                    <button class="country" data-region="IS">Ísland <span style="color:#999; font-size:12px;">Íslenska</span></button>
+                    <button class="country" data-region="IT">Italia <span style="color:#999; font-size:12px;">Italiano</span></button>
+                    <button class="country" data-region="LT">Lietuva <span style="color:#999; font-size:12px;">Lietuvių</span></button>
+                    <button class="country" data-region="LU">Luxembourg <span style="color:#999; font-size:12px;">Français · Deutsch</span></button>
+                    <button class="country" data-region="NL">Nederland <span style="color:#999; font-size:12px;">Nederlands</span></button>
+                    <button class="country" data-region="NO">Norge <span style="color:#999; font-size:12px;">Norsk</span></button>
+                    <button class="country" data-region="AT">Österreich <span style="color:#999; font-size:12px;">Deutsch</span></button>
+                    <button class="country" data-region="PL">Polska <span style="color:#999; font-size:12px;">Polski</span></button>
+                    <button class="country" data-region="PT">Portugal <span style="color:#999; font-size:12px;">Português</span></button>
+                    <button class="country" data-region="RO">România <span style="color:#999; font-size:12px;">Română</span></button>
+                    <button class="country" data-region="SI">Slovenija <span style="color:#999; font-size:12px;">Slovenščina</span></button>
+                    <button class="country" data-region="ES">España <span style="color:#999; font-size:12px;">Español</span></button>
+                    <button class="country" data-region="CH">Switzerland <span style="color:#999; font-size:12px;">Français · Deutsch · Italiano</span></button>
+                    <button class="country" data-region="SE">Sverige <span style="color:#999; font-size:12px;">Svenska</span></button>
+                    <button class="country" data-region="FI">Suomi <span style="color:#999; font-size:12px;">Suomi</span></button>
+                    <button class="country" data-region="TR">Türkiye <span style="color:#999; font-size:12px;">Türkçe</span></button>
+                    <button class="country" data-region="GB">United Kingdom <span style="color:#999; font-size:12px;">English</span></button>
+                </div>
             </div>
         </div>
     </div>
@@ -305,11 +416,13 @@ body {
 
     <script>
 console.log("Navbar Loaded Successfully");
+
 const modal = document.getElementById("region-modal");
 const openBtn = document.getElementById("open-region-modal");
 const closeBtn = document.getElementById("close-region-modal");
 
 if (modal && openBtn && closeBtn) {
+    
     // Auto-select India English on page load
     window.addEventListener("load", () => {
         const indiaEnglish = document.getElementById("india-default");
@@ -318,14 +431,17 @@ if (modal && openBtn && closeBtn) {
             console.log("India English auto-selected");
         }
     });
+
     openBtn.addEventListener("click", () => {
         modal.classList.add("show");
         document.body.style.overflow = "hidden";
     });
+
     closeBtn.addEventListener("click", () => {
         modal.classList.remove("show");
         document.body.style.overflow = "auto";
     });
+
     const backdrop = document.querySelector(".modal-backdrop");
     backdrop.addEventListener("click", (e) => {
         if (e.target === backdrop) {
@@ -333,29 +449,37 @@ if (modal && openBtn && closeBtn) {
             document.body.style.overflow = "auto";
         }
     });
+
     document.addEventListener("keydown", (e) => {
         if (e.key === "Escape" && modal.classList.contains("show")) {
             modal.classList.remove("show");
             document.body.style.overflow = "auto";
         }
     });
+
     const countryButtons = document.querySelectorAll(".country");
+    
     countryButtons.forEach(btn => {
         btn.addEventListener("click", function(e) {
             e.preventDefault();
             e.stopPropagation();
+            
             countryButtons.forEach(b => {
                 b.classList.remove("active");
             });
+
             this.classList.add("active");
+
             const selectedRegion = this.getAttribute("data-region");
             const selectedCountry = this.textContent.trim();
+
             console.log("Selected Region:", selectedRegion);
             console.log("Selected Country:", selectedCountry);
         });
     });
+
     console.log("Region Modal Initialized Successfully");
-} 
+}
     </script>
 </body>
 </html>

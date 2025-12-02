@@ -7,7 +7,7 @@ const closeBtn = document.getElementById("close-region-modal");
 
 // ========== CHECK IF ALL ELEMENTS EXIST ==========
 if (modal && openBtn && closeBtn) {
-
+    
     // ========== OPEN MODAL ==========
     openBtn.addEventListener("click", () => {
         modal.classList.add("show");
@@ -22,14 +22,12 @@ if (modal && openBtn && closeBtn) {
 
     // ========== CLOSE ON BACKDROP CLICK ==========
     const backdrop = document.querySelector(".modal-backdrop");
-    if (backdrop) {
-        backdrop.addEventListener("click", (e) => {
-            if (e.target === backdrop) {
-                modal.classList.remove("show");
-                document.body.style.overflow = "auto";
-            }
-        });
-    }
+    backdrop.addEventListener("click", (e) => {
+        if (e.target === backdrop) {
+            modal.classList.remove("show");
+            document.body.style.overflow = "auto";
+        }
+    });
 
     // ========== CLOSE ON ESC KEY ==========
     document.addEventListener("keydown", (e) => {
@@ -41,33 +39,20 @@ if (modal && openBtn && closeBtn) {
 
     // ========== HANDLE COUNTRY SELECTION ==========
     const countryButtons = document.querySelectorAll(".country");
-
-    // Auto-select India English on page load (if present)
-    window.addEventListener("load", () => {
-        const indiaEnglish = document.getElementById("india-default");
-        if (indiaEnglish) {
-            countryButtons.forEach(b => b.classList.remove("active", "india-lang"));
-            indiaEnglish.classList.add("active", "india-lang");
-            console.log("India English auto-selected");
-        }
-    });
-
+    
     countryButtons.forEach(btn => {
-        btn.addEventListener("click", function (e) {
+        btn.addEventListener("click", function(e) {
             // Prevent default and stop propagation
             e.preventDefault();
             e.stopPropagation();
-
+            
             // Remove active class from all buttons
             countryButtons.forEach(b => {
-                b.classList.remove("active", "india-lang");
+                b.classList.remove("active");
             });
 
             // Add active class to clicked button
             this.classList.add("active");
-            if (this.classList.contains("india-lang")) {
-                this.classList.add("india-lang");
-            }
 
             // Get selected data
             const selectedRegion = this.getAttribute("data-region");
@@ -76,11 +61,21 @@ if (modal && openBtn && closeBtn) {
             // Log to console
             console.log("Selected Region:", selectedRegion);
             console.log("Selected Country:", selectedCountry);
+            
+            // Optional: Send data to backend
+            // fetch('/api/set-region', {
+            //     method: 'POST',
+            //     headers: { 'Content-Type': 'application/json' },
+            //     body: JSON.stringify({ 
+            //         region: selectedRegion, 
+            //         country: selectedCountry 
+            //     })
+            // });
         });
     });
 
     console.log("Region Modal Initialized Successfully");
-
+    
 } else {
     console.log("Warning: Modal elements not found");
     if (!modal) console.log("Missing: region-modal");
