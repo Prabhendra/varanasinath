@@ -37,6 +37,7 @@ body {
 .nav-center {
     display: flex;
     gap: 30px;
+    position: relative;
 }
 
 .nav-center a {
@@ -81,7 +82,6 @@ body {
 }
 
 /* ========== MODAL STYLING ========== */
-
 .modal {
     position: fixed;
     inset: 0;
@@ -115,7 +115,6 @@ body {
     flex-direction: column;
 }
 
-/* Modal Header */
 .modal-header {
     display: flex;
     justify-content: space-between;
@@ -152,7 +151,6 @@ body {
     color: #000;
 }
 
-/* Modal Content Grid */
 .modal-content {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -179,7 +177,6 @@ body {
     background: #999;
 }
 
-/* Region Column */
 .region-column h3 {
     font-size: 13px;
     font-weight: 700;
@@ -189,7 +186,6 @@ body {
     color: #666;
 }
 
-/* Country Button - FIXED */
 .country {
     display: block;
     width: 100%;
@@ -241,8 +237,14 @@ body {
     color: #e6f0ff;
 }
 
-/* ========== RESPONSIVE DESIGN ========== */
+.country.active.india-lang {
+    background: #FF9500;
+    border-color: #FF9500;
+    color: #ffffff;
+    font-weight: 600;
+}
 
+/* ========== RESPONSIVE DESIGN ========== */
 @media (max-width: 1200px) {
     .modal-content {
         grid-template-columns: repeat(3, 1fr);
@@ -265,25 +267,135 @@ body {
         border-radius: 0;
         padding: 20px;
     }
-
     .modal-header {
         margin-bottom: 16px;
     }
-
     .modal-content {
         grid-template-columns: 1fr;
         gap: 16px;
     }
-
     .modal-header h2 {
         font-size: 18px;
     }
-
     .nav-center {
         gap: 15px;
     }
-
     .nav-center a {
         font-size: 12px;
+    }
+}
+
+/* ========== MEGA DROPDOWN (SHOP) ========== */
+.mega-dropdown-wrapper {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 62px;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 1500;
+}
+
+.mega-dropdown {
+    width: 100%;
+    max-width: 1200px;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.2);
+    padding: 18px 24px 22px;
+    opacity: 0;
+    transform: translateY(10px);
+    visibility: hidden;
+    transition: opacity 220ms ease, transform 220ms ease, visibility 0s linear 220ms;
+    pointer-events: none;
+}
+
+.mega-dropdown.is-open {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+    transition: opacity 220ms ease, transform 220ms ease, visibility 0s;
+    pointer-events: auto;
+}
+
+.mega-dropdown-inner {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.mega-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-decoration: none;
+    color: #111111;
+    padding: 12px 12px 14px;
+    border-radius: 14px;
+    transition: background-color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+
+.mega-item:hover {
+    background-color: #f6f6f8;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.mega-item-image {
+    position: relative;
+    width: 100%;
+    padding-bottom: 64%;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #f2f2f2;
+}
+
+.mega-item-image img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+    transform: scale(1);
+    transition: transform 260ms ease;
+}
+
+.mega-item:hover .mega-item-image img {
+    transform: scale(1.06);
+}
+
+.mega-item-title {
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+/* ========== RESPONSIVE (MEGA DROPDOWN) ========== */
+@media (max-width: 1024px) {
+    .mega-dropdown {
+        max-width: 1000px;
+        padding-inline: 18px;
+    }
+    .mega-item-title {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .mega-dropdown-inner {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 520px) {
+    .mega-dropdown-inner {
+        grid-template-columns: 1fr;
+    }
+    .mega-dropdown {
+        max-width: calc(100% - 16px);
+        margin-inline: 8px;
+        border-radius: 14px;
     }
 }
